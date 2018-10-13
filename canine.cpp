@@ -12,13 +12,16 @@ Canine::Canine(int age, double xCoord, double yCoord)
     locationY = yCoord;
 }
 
-Canine::Canine(const Canine&){}
+Canine::Canine(const Animal& animal){}
 Canine::~Canine(){}
 void Canine::sleep() {cout << "Canine " << Canine::id << " is sleeping.\n";}
 void Canine::eat() {cout << "Canine " << Canine::id << " is eating.\n";}
 void Canine::hunt() {cout << "Canine " << Canine::id << " is hunting.\n";}
-ostream& Canine::operator<<(ostream& os, const Canine&)
+ostream& operator<<(ostream& os, const Canine& canine)
 {
-    os << "X-Coordinate: " << locationX << " Y-Coordinate: " << locationY;
+    os << "Canine: " << canine.id << "\n";
+    os << "Alive: " << canine.alive << "\n";
+    os << "Age: " << canine.age << "\n";
+    os << "X-Coordinate: " << canine.locationX << " Y-Coordinate: " << canine.locationY << "\n\n";
     return os;
 }

@@ -34,9 +34,12 @@ Animal::Animal(const Animal& animal) {}
 Animal::~Animal(){}
 void Animal::sleep(){cout << "Animal " << id << " is sleeping.\n";}
 void Animal::eat(){cout << "Animal " << id << " is eating.\n";}
-ostream& Animal::operator<<(ostream& os, const Animal& animal)
+ostream& operator<<(ostream& os, const Animal& animal)
 {
-    os << "X-Coordinate: " << locationX << " Y-Coordinate: " << locationY;
+    os << "Animal: " << animal.id << "\n";
+    os << "Alive: " << animal.alive << "\n";
+    os << "Age: " << animal.age << "\n";
+    os << "X-Coordinate: " << animal.locationX << " Y-Coordinate: " << animal.locationY << "\n\n";
     return os;
 }
 

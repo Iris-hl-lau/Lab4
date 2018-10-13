@@ -2,9 +2,7 @@
 // Created by Iris L on 2018-10-12.
 //
 
-#ifndef LAB4_ANIMAL_HPP
-#define LAB4_ANIMAL_HPP
-
+#pragma once
 #include <iostream>
 using namespace std;
 //Characteristics of an Animal
@@ -27,4 +25,4 @@ public:
     friend ostream& operator<<(ostream&, const Animal&);
 };
 
-#endif //LAB4_ANIMAL_HPP
+//LAB4_ANIMAL_HPP

@@ -20,12 +20,16 @@ void Bird::move(double xCoord, double yCoord, double vCoord)
     locationV = vCoord;
 }
 
-Bird::Bird(const Bird& bird) {}
+Bird::Bird(const Animal& animal) {}
 Bird::~Bird() {}
 void Bird::sleep() {cout << "Bird " << Bird::id << " is sleeping.\n";}
 void Bird::eat() {cout << "Bird " << Bird::id << " is eating.\n";}
-ostream& Bird::operator<<(ostream& os, const Bird& bird)
+ostream& operator<<(ostream& os, const Bird& bird)
 {
-    os << "X-Coordinate: " << locationX << " Y-Coordinate: " << locationY << " V-Coordinate: " << locationV;
+    os << "Bird: " << bird.id << "\n";
+    os << "Alive: " << bird.alive << "\n";
+    os << "Age: " << bird.age << "\n";
+    os << "X-Coordinate: " << bird.locationX << " Y-Coordinate: " << bird.locationY
+    << " V-Coordinate: " << bird.locationV << "\n\n";
     return os;
 }
