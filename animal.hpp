@@ -7,7 +7,7 @@
 
 #include <iostream>
 using namespace std;
-
+//Characteristics of an Animal
 class Animal
 {
 protected:
@@ -18,7 +18,7 @@ protected:
 public:
     static long counter;
     Animal();
-    Animal(int age, double, double);
+    Animal(int, double, double);
     virtual void move(double, double);
     Animal(const Animal&);
     virtual ~Animal();

@@ -4,8 +4,20 @@
 
 #ifndef LAB4_CANINE_HPP
 #define LAB4_CANINE_HPP
-class Canine
-{
 
+#include "animal.cpp"
+//Characteristics of a Canine which is an Animal
+class Canine : public Animal
+{
+public:
+    Canine();
+    Canine(int, double, double);
+    //void move(double, double) override;
+    Canine(const Canine&);
+    virtual ~Canine();
+    void sleep()override;
+    void eat() override;
+    virtual void hunt();
+    friend ostream& operator<<(ostream&, const Canine&);
 };
 #endif //LAB4_CANINE_HPP

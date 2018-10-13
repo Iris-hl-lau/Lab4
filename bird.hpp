@@ -8,7 +8,7 @@
 #include <iostream>
 #include "animal.cpp"
 using namespace std;
-
+//Characteristics of a Bird which is an Animal
 class Bird : public Animal {
 protected:
     double locationV;
@@ -17,7 +17,7 @@ public:
     Bird(int, double, double, double);
     void move(double, double, double);
     Bird(const Bird&);
-    ~Bird();
+    virtual ~Bird();
     void sleep()override;
     void eat() override;
     friend ostream& operator<<(ostream& os, const Bird& bird);

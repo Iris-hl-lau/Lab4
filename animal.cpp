@@ -3,7 +3,7 @@
 //
 
 #include "animal.hpp"
-
+//Defining what an Animal can do
 long Animal::counter = 0;
 
 Animal::Animal()
@@ -30,10 +30,14 @@ void Animal::move(double xCoord, double yCoord)
     locationY = yCoord;
 }
 
-Animal::Animal(const Animal& animal) {cout << "Animal " << id << " copied.\n";} //msg for test purposes only
+Animal::Animal(const Animal& animal) {}
 Animal::~Animal(){}
 void Animal::sleep(){cout << "Animal " << id << " is sleeping.\n";}
 void Animal::eat(){cout << "Animal " << id << " is eating.\n";}
-ostream& Animal::operator<<(ostream& os, const Animal& animal){
-
+ostream& Animal::operator<<(ostream& os, const Animal& animal)
+{
+    os << "X-Coordinate: " << locationX << " Y-Coordinate: " << locationY;
+    return os;
 }
+
+

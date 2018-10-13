@@ -3,8 +3,8 @@
 //
 
 #include "bird.hpp"
-
-Bird::Bird() {age = 0; locationX = 0; locationY = 0; this->locationV = 0;}
+//Defining what a Bird can do
+Bird::Bird() {}
 Bird::Bird(int age, double xCoord, double yCoord, double vCoord)
 {
     this->age = age;
@@ -22,7 +22,10 @@ void Bird::move(double xCoord, double yCoord, double vCoord)
 
 Bird::Bird(const Bird& bird) {}
 Bird::~Bird() {}
-
 void Bird::sleep() {cout << "Bird " << Bird::id << " is sleeping.\n";}
 void Bird::eat() {cout << "Bird " << Bird::id << " is eating.\n";}
-ostream& Bird::operator<<(ostream& os, const Bird& bird) {}
+ostream& Bird::operator<<(ostream& os, const Bird& bird)
+{
+    os << "X-Coordinate: " << locationX << " Y-Coordinate: " << locationY << " V-Coordinate: " << locationV;
+    return os;
+}
